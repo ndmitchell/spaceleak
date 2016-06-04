@@ -23,3 +23,6 @@
 
 * ACM: http://queue.acm.org/detail.cfm?id=2538488
 
+### Notes
+
+On the main thread the stack limit is less effective, usually more like 8K if you request 1K. On spawned threads it seems much better. Solution is to always `join . onceFork` on the main thread.
