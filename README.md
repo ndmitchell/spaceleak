@@ -7,7 +7,8 @@
 * Shake: http://neilmitchell.blogspot.co.uk/2013/02/chasing-space-leak-in-shake.html
 * Detecting space leaks (leak in base): http://neilmitchell.blogspot.co.uk/2015/09/detecting-space-leaks.html
 * Three space leaks (2x Hoogle, 1x Shake): http://neilmitchell.blogspot.co.uk/2015/09/three-space-leaks.html
-* QuickCheck space leak: http://neilmitchell.blogspot.co.uk/
+* QuickCheck space leak: http://neilmitchell.blogspot.co.uk/2016/05/another-space-leak-quickcheck-edition.html
+* Alex/Happy: http://neilmitchell.blogspot.co.uk/2016/07/more-space-leaks-alexhappy-edition.html
 
 ### Fixes
 
