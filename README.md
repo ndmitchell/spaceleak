@@ -1,5 +1,8 @@
 # spaceleak
 
+### Talks
+
+* Haskell eXchange 2016: Video https://skillsmatter.com/skillscasts/8724-plugging-space-leaks-improving-performance, slides http://ndmitchell.com/downloads/slides-plugging_space_leaks_improving_performance-06_oct_2016.pdf
 
 ### Blog tales
 
