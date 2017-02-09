@@ -22,6 +22,7 @@
 
 * Happy: Space leaks https://github.com/simonmar/happy/pull/64 and improved code https://github.com/simonmar/happy/pull/66
 * Pretty: https://github.com/haskell/pretty/pull/35
+* Statistics: https://github.com/bos/statistics/pull/114
 
 ### Publications
 
