@@ -41,6 +41,10 @@ Below are links to further information, including lots of practical examples of 
 
 * ACM: http://queue.acm.org/detail.cfm?id=2538488
 
+### Other approaches
+
+* http://simonmar.github.io/posts/2018-06-20-Finding-fixing-space-leaks.html describes how to use weak references to detect what memory is being retained.
+
 ### Notes
 
 On the main thread the stack limit is less effective, usually more like 8K if you request 1K. On spawned threads it seems much better. Solution is to always `join . onceFork` on the main thread.
