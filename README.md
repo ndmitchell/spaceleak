@@ -25,6 +25,7 @@ Below are links to further information, including lots of practical examples of 
 * Three space leaks (2x Hoogle, 1x Shake): http://neilmitchell.blogspot.co.uk/2015/09/three-space-leaks.html
 * QuickCheck space leak: http://neilmitchell.blogspot.co.uk/2016/05/another-space-leak-quickcheck-edition.html
 * Alex/Happy: http://neilmitchell.blogspot.co.uk/2016/07/more-space-leaks-alexhappy-edition.html
+* Writer is a space leak: https://blog.infinitenegativeutility.com/2016/7/writer-monads-and-space-leaks (fixed by [writer-cps-transformers](https://hackage.haskell.org/package/writer-cps-transformers))
 
 ### Fixes
 
