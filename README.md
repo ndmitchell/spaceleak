@@ -1,6 +1,12 @@
 # Spaceleak detection
 
-Every large Haskell program almost inevitably contains [space leaks](https://queue.acm.org/detail.cfm?id=2538488). Space leaks are often difficult to detect, but relatively easy to fix once detected (typically insert a <code>!</code>). To find a space leak, given a program and a representative run (e.g. the test suite, a suitable input file):
+Every large Haskell program almost inevitably contains [space leaks](https://queue.acm.org/detail.cfm?id=2538488). Space leaks are often difficult to detect, but relatively easy to fix once detected (typically insert a `!`). This page gives a simple technique to detect some space leaks, along with a set of blog posts using that technique and detailing other space leaks.
+
+## Spaceleak stack-limiting technique
+
+The stack-limiting technique is useful for detecting a common kind of spaceleak, a situation where an excessive number of interdependent thunks are created and eventually evaluated. The technique works because thunks are evaluated on the stack, so by limiting the stack size we effectively limit the number of interdependent thunks that we can evaluate.
+
+To find space leaks, given a program and a representative run (e.g. the test suite, a suitable input file):
 
 * Compile the program for profiling, e.g. `ghc --make Main.hs -rtsopts -prof -auto-all`.
 * Run the program with a specific stack size, e.g. `./Main +RTS -K100K` to run with a 100Kb stack.
@@ -10,6 +16,8 @@ Every large Haskell program almost inevitably contains [space leaks](https://que
 * Attempt to fix the space leak, confirm by rerunning with `-K32K`.
 * Repeat until the test works with a small stack, typically `-K1K`.
 * Add something to your test suite to ensure that if a space leak is ever introduced then it fails, e.g. `ghc-options: -with-rtsopts=-K1K` in Cabal.
+
+This technique does not detect when an excessive number of thunks are created but never evaluated, or when a small number of thunks hold on to a large amount of live data.
 
 Below are links to further information, including lots of practical examples of real space leaks caught using the method above.
 
