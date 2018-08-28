@@ -19,6 +19,8 @@ To find space leaks, given a program and a representative run (e.g. the test sui
 
 This technique does not detect when an excessive number of thunks are created but never evaluated, or when a small number of thunks hold on to a large amount of live data.
 
+Note that typically the main thread requires greater than 1K stack, and that once GHC crosses 1K it makes the stack 32K bigger, as a result anything less than 33K (e.g. 1K) is often rounded up to 33K. To obtain a more precise stack measurement use `-kc2k` which increases the stack in 2K chunks. That said, 32K corresponds to approximately 1000 stack evaluation slots, which suggests you don't have any significant space leaks.
+
 Below are links to further information, including lots of practical examples of real space leaks caught using the method above.
 
 ### Talks
