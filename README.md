@@ -36,6 +36,7 @@ Below are links to further information, including lots of practical examples of 
 * QuickCheck space leak: http://neilmitchell.blogspot.co.uk/2016/05/another-space-leak-quickcheck-edition.html
 * Alex/Happy: http://neilmitchell.blogspot.co.uk/2016/07/more-space-leaks-alexhappy-edition.html
 * Writer is a space leak: https://blog.infinitenegativeutility.com/2016/7/writer-monads-and-space-leaks (fixed by [writer-cps-transformers](https://hackage.haskell.org/package/writer-cps-transformers))
+* Fixing 17 space leaks in GHCi: https://simonmar.github.io/posts/2018-06-20-Finding-fixing-space-leaks.html
 
 ### Fixes
 
