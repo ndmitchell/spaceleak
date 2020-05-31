@@ -56,6 +56,8 @@ Below are links to further information, including lots of practical examples of 
 ### Other approaches
 
 * http://simonmar.github.io/posts/2018-06-20-Finding-fixing-space-leaks.html describes how to use weak references to detect what memory is being retained.
+* https://neilmitchell.blogspot.com/2020/05/fixing-space-leaks-in-ghcide.html describes finding space leaks in Ghcide and unordered-containers.
+* https://github.com/haskell-unordered-containers/unordered-containers/issues/254#issuecomment-636387493 describes a trick about using `(# a #)` unboxed tuples as the return type of a function to keep laziness but get rid of space leaks.
 
 ### Notes
 
