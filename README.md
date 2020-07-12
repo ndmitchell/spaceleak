@@ -8,7 +8,7 @@ The stack-limiting technique is useful for detecting a common kind of spaceleak,
 
 To find space leaks, given a program and a representative run (e.g. the test suite, a suitable input file):
 
-* Compile the program for profiling, e.g. `ghc --make Main.hs -rtsopts -prof -auto-all`.
+* Compile the program for profiling, e.g. `ghc --make Main.hs -rtsopts -prof -fprof-auto`.
 * Run the program with a specific stack size, e.g. `./Main +RTS -K100K` to run with a 100Kb stack.
 * Increase/decrease the stack size until you have determined the minimum stack for which the program succeeds, e.g. `-K33K`.
 * Reduce the stack by a small amount and rerun with `-xc`, e.g. `./Main +RTS -K32K -xc`.
